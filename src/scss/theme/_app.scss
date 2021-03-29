@@ -2268,7 +2268,7 @@ textarea.form-control {
   cursor: pointer;
   border-radius: 0;
   position: absolute;
-  right: 70px;
+  right: 15px;
   top: 17px;
   transition: all 0.5s ease-in-out;
   margin-top: 0;
@@ -3153,13 +3153,13 @@ textarea.form-control {
   }
 }
 
-@media (min-width: 320px) {
-  .main-slider .slide.slide1,
-  .main-slider .slide.slide2,
-  .main-slider .slide.slide4 {
-    background-position: right center;
-  }
-}
+// @media (min-width: 320px) {
+//   .main-slider .slide.slide1,
+//   .main-slider .slide.slide2,
+//   .main-slider .slide.slide4 {
+//     background-position: right center;
+//   }
+// }
 
 @media (min-width: 992px) {
   .main-slider .slide.slide1,

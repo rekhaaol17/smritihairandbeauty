@@ -3,8 +3,7 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
+      (click)="toggleNavbarItems()"
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
@@ -27,31 +26,33 @@
       </div>
     </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      [ngClass]="{
+        show: isOpened
+      }"
+    >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/"
+          <a class="nav-link" routerLink="/" (click)="isOpened = false"
             >Home <span class="sr-only">(current)</span></a
           >
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item">
           <a
-            class="nav-link dropdown-toggle"
-            data-toggle="dropdown"
+            class="nav-link"
             role="button"
             aria-haspopup="true"
             aria-expanded="true"
             routerLink="services"
+            (click)="isOpened = false"
             >Services</a
           >
-          <ul class="dropdown-menu show">
-            <li><a href="service.html">Services</a></li>
-            <li><a href="single-service.html">Service Details</a></li>
-          </ul>
         </li>
 
-        <li class="dropdown megaDropMenu nav-item">
+        <!-- <li class="dropdown megaDropMenu nav-item">
           <a
             class="nav-link dropdown-toggle"
             data-toggle="dropdown"
@@ -237,25 +238,26 @@
             <li><a href="accrodion.html">Accrodions</a></li>
             <li><a href="buttons-alerts.html">Buttons &amp; Alerts</a></li>
           </ul>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a
             class="nav-link"
             role="button"
             routerLink="book-appointment"
             routerLinkActive="active"
+            (click)="isOpened = false"
             >Book Appointment</a
           >
         </li>
       </ul>
     </div>
-
+    <!--
     <div class="cart_btn">
       <a href="cart.html"
         ><i class="fa fa-shopping-basket" aria-hidden="true"></i
         ><span class="badge">0</span></a
       >
-    </div>
+    </div> -->
     <!-- header search ends-->
   </div>
 </nav>
