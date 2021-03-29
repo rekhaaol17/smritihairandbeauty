@@ -19,6 +19,13 @@ const routes: Routes = [
     component: BookAppointmentComponent,
   },
   {
+    path: 'appointments',
+    loadChildren: () =>
+      import('./appointments/appointments.module').then(
+        (m) => m.AppointmentsModule
+      ),
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },

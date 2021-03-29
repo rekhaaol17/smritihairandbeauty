@@ -8,3 +8,11 @@ ngh --dir=dist/smritiHairAndBeauty --message="My First deploy"
 All done!
 https://rekhaaol17.github.io/smritihairandbeauty/
 ```
+
+## Firebase
+
+```
+firebase login
+firebase init
+firebase deploy
+```

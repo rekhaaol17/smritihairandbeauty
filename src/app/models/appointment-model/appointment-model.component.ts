@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'sm-appointment-model',
@@ -13,7 +14,11 @@ export class AppointmentModelComponent implements OnInit {
   colorTheme = 'theme-blue';
   bsConfig: Partial<BsDatepickerConfig>;
   form: FormGroup;
-  constructor(public bsModalRef: BsModalRef, private fb: FormBuilder) {}
+  constructor(
+    public bsModalRef: BsModalRef,
+    private fb: FormBuilder,
+    private firestore: AngularFirestore
+  ) {}
 
   ngOnInit(): void {
     this.bsConfig = Object.assign({}, { containerClass: this.colorTheme });
@@ -29,7 +34,21 @@ export class AppointmentModelComponent implements OnInit {
     });
   }
 
+  addAppointment() {
+    this.firestore
+      .collection('appointments')
+      .add(this.form.value)
+      .then((res) => {
+        console.log(res);
+        this.form.reset();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
   onFormSubmit() {
+    this.addAppointment();
     console.log('HERERE', this.form.value);
     this.bsModalRef.hide();
   }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "smritihairandbeauty": {
+      "hosting": {
+        "smritiHairAndBeauty": [
+          "smritihairandbeauty"
+        ]
+      }
+    }
+  }
+}
