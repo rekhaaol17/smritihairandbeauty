@@ -2,9 +2,9 @@
 
 ```
 npm install -g angular-cli-ghpages
-ng build --prod --base-href "https://hs950559.github.io/ng11demo/"
-ngh --dir=dist/ng11demo --message="My First deploy"
+ng build --prod --base-href "https://rekhaaol17.github.io/smritihairandbeauty/"
+ngh --dir=dist/smritiHairAndBeauty --message="My First deploy"
 
 All done!
-https://hs950559.github.io/ng11demo/
+https://rekhaaol17.github.io/smritihairandbeauty/
 ```
