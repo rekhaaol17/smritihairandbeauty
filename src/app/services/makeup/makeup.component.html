@@ -1,0 +1,241 @@
+<div class="tab-pane active" id="makeup">
+  <div class="tabbable tabs-left">
+    <div class="row">
+      <div class="col-md-5 col-lg-4">
+        <ul class="nav nav-tabs">
+          <li>
+            <a
+              href=""
+              (click)="selectTab(0, $event)"
+              [class.active]="weddingMakeupTab.active"
+              >Bridal Makeup<span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(1, $event)"
+              [class.active]="engagementMakeupTab.active"
+              >Engagement Makeup<span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(2, $event)"
+              [class.active]="partyMakeupTab.active"
+              >Party Makeup<span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(3, $event)"
+              [class.active]="matteMakeupTab.active"
+              >Matte Makeup<span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(4, $event)"
+              [class.active]="naturalMinimalMakeupTab.active"
+              >Natural Makeup<span>$40</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(5, $event)"
+              [class.active]="shimmerMakeupTab.active"
+              >Shimmer Makeup<span>$19</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(6, $event)"
+              [class.active]="smokeyMakeupTab.active"
+              >Smokey Makeup<span>$13</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-7 col-lg-8">
+        <tabset class="tab-content" #staticTabs>
+          <tab class="tab-pane" #weddingMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/wedding-makeup.jpeg"
+                alt="Image"
+                class="img-responsive"
+              />
+              <h3>Wedding Makeup</h3>
+              <h4>$25.00 Per Head</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+          <tab class="tab-pane" #engagementMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/engagement-makeup.jpg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Braids &amp; Twist</h3>
+              <h4>$25.00 Per Head</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+
+          <tab class="tab-pane" #partyMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/party-makeup.jpeg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Braids &amp; Twist</h3>
+              <h4>$25.00 Per Head</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+          <tab class="tab-pane" #matteMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/matte-makeup.jpg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Braids &amp; Twist</h3>
+              <h4>$25.00 Per Head</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+
+          <tab class="tab-pane" #naturalMinimalMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../assets/images/natural-makeup.jpeg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Hair Color</h3>
+              <h4>$40.00 Per Head</h4>
+              <p>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo. Consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo.
+              </p>
+              <a href="#" class="btn btn-primary first-btn"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+
+          <tab class="tab-pane" #shimmerMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/shimmer-makeup.jpeg"
+                alt="Image Shimmer"
+                class="img-responsive"
+              />
+              <h3>Hair Extension</h3>
+              <h4>$19.00 Per Head</h4>
+              <p>
+                Amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+              </p>
+              <a href="#" class="btn btn-primary first-btn"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+
+          <tab class="tab-pane" #smokeyMakeupTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/smokey-makeup.jpeg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Corrective Color</h3>
+              <h4>$13.00 Per Head</h4>
+              <p>
+                Ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo.
+              </p>
+              <a href="#" class="btn btn-primary first-btn"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>

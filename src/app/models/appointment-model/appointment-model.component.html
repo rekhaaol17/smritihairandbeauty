@@ -1,0 +1,101 @@
+<div class="modal-header">
+  <button type="button" class="close" (click)="bsModalRef.hide()">
+    &times;
+  </button>
+  <h4 class="modal-title appointment-modal-title">
+    Appointment For {{ title }}
+  </h4>
+</div>
+<div class="modal-body">
+  <div id="appointment-alert" class="my-alert"></div>
+  {{ form.value | json }}
+  <form
+    action="mail/appointment-form.php"
+    method="post"
+    id="appoinmentModalForm"
+    [formGroup]="form"
+    (ngSubmit)="onFormSubmit()"
+  >
+    <!--Response Holder-->
+    <div class="form-group categoryTitle">
+      <h5>Service Date and Time</h5>
+    </div>
+    <div class="dateSelect form-half form-left">
+      <div class="input-group date ed-datepicker filterDate">
+        <input
+          type="text"
+          name="appointment-form-date"
+          class="form-control"
+          placeholder="MM/DD/YYYY"
+          formControlName="date"
+          bsDatepicker
+          [bsConfig]="bsConfig"
+        />
+        <div class="input-group-addon">
+          <span class="ti-calendar"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeSelect appointment-timeSelect form-half clearfix">
+      <timepicker formControlName="time"></timepicker>
+    </div>
+
+    <div class="form-group categoryTitle">
+      <h5>Personal info</h5>
+    </div>
+    <div class="form-group form-half form-left">
+      <input
+        type="text"
+        name="appointment-form-full-name"
+        class="form-control"
+        placeholder="Name"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-group form-half form-right">
+      <input
+        type="email"
+        name="appointment-form-email"
+        class="form-control"
+        placeholder="Your email"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-group form-half form-left">
+      <input
+        type="tel"
+        name="appointment-form-phone"
+        class="form-control"
+        placeholder="Phone number"
+        formControlName="phone"
+      />
+    </div>
+    <div class="form-group form-half form-right">
+      <input
+        type="text"
+        name="appointment-form-address"
+        class="form-control"
+        placeholder="Your address"
+        formControlName="address"
+      />
+    </div>
+    <div class="form-group">
+      <textarea
+        class="form-control"
+        name="appointment-form-message"
+        placeholder="Your Message"
+        formControlName="message"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <button
+        type="submit"
+        id="appointment-submit-btn"
+        class="btn btn-primary first-btn"
+      >
+        Submit Now
+      </button>
+    </div>
+  </form>
+</div>

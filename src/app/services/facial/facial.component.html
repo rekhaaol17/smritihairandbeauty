@@ -1,0 +1,148 @@
+<div class="tab-pane active" id="facial">
+  <div class="tabbable tabs-left">
+    <div class="row">
+      <div class="col-md-5 col-lg-4">
+        <ul class="nav nav-tabs">
+          <li>
+            <a
+              href=""
+              (click)="selectTab(0, $event)"
+              [class.active]="normalDrySkinTab.active"
+              >Normal/Dry Skin<span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(1, $event)"
+              [class.active]="combinationSkinTab.active"
+              >Combination Skin<span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(2, $event)"
+              [class.active]="oilySkinTab.active"
+              >Oily Skin <span>$25</span></a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              (click)="selectTab(3, $event)"
+              [class.active]="sensitiveSkinTab.active"
+              >Sensitive Skin<span>$25</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-7 col-lg-8">
+        <tabset class="tab-content" #staticTabs>
+          <tab class="tab-pane" #normalDrySkinTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/dry-skin.jpeg"
+                alt="Image"
+                class="img-responsive"
+              />
+              <h3>Normal/Dry Skin</h3>
+              <h4>Rs. 10.00 Per Head</h4>
+              <p>
+                For normal to dry skin, choose a facial that includes deep
+                cleansing, a moisturising massage and steam treatment to remove
+                extra dirt. Opt for a moisturising mask or a hydrating serum to
+                finish off. If your skin is on the dry side, avoid too much
+                exfoliating
+                <a routerLink="../dry-skin-care">Read More</a>.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+          <tab class="tab-pane" #combinationSkinTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/combination-skin.jpeg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Combination Skin</h3>
+              <h4>Rs25.00 Per Head</h4>
+              <p>
+                Since combination skin has oily and normal to dry skin, make
+                sure mild products are used. This is so that you don’t aggravate
+                the oily skin into breakouts and the dry skin doesn’t get drier
+                with products used for oily skin
+                <a routerLink="../combination-skin-care">Read More</a>.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+
+          <tab class="tab-pane" #oilySkinTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/oily-skin.jpeg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Oily Skin</h3>
+              <h4>$25.00 Per Head</h4>
+              <p>
+                For oily skin, opt for a facial that uses natural extracts,
+                focuses on deep cleansing and extraction with toning, a face
+                mask and a protective serum. The mask will remove excess oils,
+                shrink the pores and make the skin soft
+                <a routerLink="../oily-skin-care">Read More</a>.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+          <tab class="tab-pane" #sensitiveSkinTab="tab">
+            <div class="varietyContent">
+              <img
+                src="../../assets/images/sensitive-skin.jpeg"
+                alt="Image Variety"
+                class="img-responsive"
+              />
+              <h3>Braids &amp; Twist</h3>
+              <h4>$25.00 Per Head</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="btn btn-primary first-btn"
+                data-toggle="modal"
+                data-target="#appoinmentModal"
+                >make An Appoinment</a
+              >
+            </div>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>

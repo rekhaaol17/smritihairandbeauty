@@ -1,0 +1,224 @@
+<!-- PAGE TITLE SECTION -->
+<section class="clearfix pageTitleArea">
+  <div class="container">
+    <div class="pageTitle">
+      <h1>Appointment</h1>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section class="clearfix contactSection padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xl-8">
+        <div class="contactTitle">
+          <h3>Select Services:</h3>
+        </div>
+
+        <ul class="list-unstyled custom-list">
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="defaultCheck1">
+              Braids & Twist
+            </label>
+          </li>
+
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck2"
+            />
+            <label class="form-check-label" for="defaultCheck2">
+              Hair color
+            </label>
+          </li>
+
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck3"
+            />
+            <label class="form-check-label" for="defaultCheck3">
+              Hair extension
+            </label>
+          </li>
+
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck4"
+            />
+            <label class="form-check-label" for="defaultCheck4">
+              Corrective color
+            </label>
+          </li>
+
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck5"
+            />
+            <label class="form-check-label" for="defaultCheck5">
+              Hair cut
+            </label>
+          </li>
+
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck6"
+            />
+            <label class="form-check-label" for="defaultCheck6">
+              Partial foil
+            </label>
+          </li>
+
+          <li class="checkbox form-check custom-checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="defaultCheck7"
+            />
+            <label class="form-check-label" for="defaultCheck7">
+              Extension per track
+            </label>
+          </li>
+        </ul>
+
+        <div class="contactTitle">
+          <h3>Appointment Date:</h3>
+        </div>
+
+        <div class="dateSelect custom-dateSelect">
+          <div
+            class="input-group date ed-datepicker filterDate"
+            data-provide="datepicker"
+          >
+            <input type="text" class="form-control" placeholder="DD/MM/YYYY" />
+            <div class="input-group-addon">
+              <span class="fa fa-calendar"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contactTitle">
+          <h3>Appointment Time:</h3>
+        </div>
+
+        <div class="custom-timeSelect clearfix">
+          <div class="countrySelect timeSelect">
+            <select name="guiest_id2" id="guiest_id2" class="select-drop">
+              <option value="0">- Select Time -</option>
+              <option value="1">9am - 10am</option>
+              <option value="2">10am - 11am</option>
+              <option value="3">11am - 12pm</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="contactTitle">
+          <h3>Personal info:</h3>
+        </div>
+
+        <div class="contactForm">
+          <div id="alert"></div>
+          <!--Response Holder-->
+          <form
+            action="mail/contact-form.php"
+            id="angelContactForm"
+            method="post"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="contact-form-name"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="contact-form-email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="contact-form-mobile"
+                class="form-control"
+                placeholder="Your Mobile"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                name="contact-form-message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <button
+                type="submit"
+                id="contact-submit-btn"
+                class="btn btn-primary first-btn"
+              >
+                Get appointment
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-4">
+        <div class="holdingInfo patternbg">
+          <h3>Operating Hours</h3>
+          <ul>
+            <li>
+              <i class="ti-location-pin" aria-hidden="true"></i> Plot no 24,
+              Shankar Green Homes, <br />Near Ameenpur Village - 502032
+            </li>
+            <li>
+              <i class="ti-time" aria-hidden="true"></i>
+              Sunday - Friday
+              <br />10am - 8pm
+            </li>
+            <li>
+              <i class="ti-microphone" aria-hidden="true"></i>
+              <a href="tel: 7893508048">7893508048</a> <br /><a
+                href="tel: 7780522909"
+                >7780522909</a
+              >
+            </li>
+            <li>
+              <i class="ti-email" aria-hidden="true"></i>
+              <a href="mailto:rekha.aol17@gmail.com">rekha.aol17@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
