@@ -8,41 +8,62 @@
               href=""
               (click)="selectTab(0, $event)"
               [class.active]="braidstwistTab.active"
-              >Braids &amp; Twist <span>$25</span></a
-            >
+              >Braids &amp; Twist
+              <!-- <span>&#8377;300</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(1, $event)"
               [class.active]="haircolorTab.active"
-              >Hair Color <span>$40</span></a
-            >
+              >Hair Color
+              <!-- <span>&#8377;400</span> -->
+            </a>
           </li>
           <li>
-            <a href="#hairextension" (click)="selectTab(2, $event)"
-              >Hair Extension<span>$19</span></a
-            >
+            <a
+              href="#hairextension"
+              [class.active]="hairextensionTab.active"
+              (click)="selectTab(2, $event)"
+              >Hair Straightening
+              <!-- <span>$19</span> -->
+            </a>
           </li>
           <li>
-            <a href="#correctivecolor" (click)="selectTab(3, $event)"
-              >Corrective Color<span>$13</span></a
-            >
+            <a
+              href="#correctivecolor"
+              (click)="selectTab(3, $event)"
+              [class.active]="correctivecolorTab.active"
+              >Corrective Color
+              <!-- <span>&#8377;1000</span> -->
+            </a>
           </li>
           <li>
-            <a href="#haircut" (click)="selectTab(4, $event)"
-              >Hair Cut<span>$48</span></a
-            >
+            <a
+              href="#haircut"
+              [class.active]="haircutTab.active"
+              (click)="selectTab(4, $event)"
+              >Hair Cut
+              <!-- <span>$48</span> -->
+            </a>
           </li>
           <li>
-            <a href="#partialfoil" (click)="selectTab(5, $event)"
-              >Partial Foil<span>$10</span></a
-            >
+            <a
+              href="#partialfoil"
+              [class.active]="partialfoilTab.active"
+              (click)="selectTab(5, $event)"
+              >Partial Foil
+              <!-- <span>$10</span> -->
+            </a>
           </li>
           <li>
-            <a href="#extensionpertrack" (click)="selectTab(6, $event)"
-              >Extension Per Track<span>$40</span></a
-            >
+            <a
+              (click)="selectTab(6, $event)"
+              [class.active]="extensionpertrackTab.active"
+              >Extension Per Track
+              <!-- <span>$40</span> -->
+            </a>
           </li>
         </ul>
       </div>
@@ -57,18 +78,21 @@
                 class="img-responsive"
               />
               <h3>Braids &amp; Twist</h3>
-              <h4>$25.00 Per Head</h4>
+              <!-- <h4>&#8377;300 Per Head</h4> -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                Twists are a top favorite technique in black hairstyles, along
+                with braids. Twists allow extending your natural hair, attaching
+                anything from quality commercial strands to dreadlocks. Many
+                African American women hold themselves back from going natural
+                simply because they have no idea of how they are going to style
+                and protect their natural hair. Here are a couple of nice ideas
+                in pictures, ladies.
               </p>
               <button
                 (click)="bookAppointment('BRAIDS & TWIST')"
                 class="btn btn-primary first-btn"
               >
-                make An Appoinment
+                Make An Appoinment
               </button>
             </div>
           </tab>
@@ -81,50 +105,49 @@
                 class="img-responsive"
               />
               <h3>Hair Color</h3>
-              <h4>$40.00 Per Head</h4>
+              <!-- <h4>&#8377;400.00 Per Head</h4> -->
               <p>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo. Consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo.
+                Hair color is the pigmentation of hair follicles due to two
+                types of melanin: eumelanin and pheomelanin. Generally, if more
+                melanin is present, the color of the hair is darker; if less
+                melanin is present, the hair is lighter. The tone of the hair is
+                dependent on the ratio of black or brown eumelanin to yellow or
+                red pheomelanin.
               </p>
               <button
                 (click)="bookAppointment('Hair Color')"
                 class="btn btn-primary first-btn"
               >
-                make An Appoinment
+                Make An Appoinment
               </button>
             </div>
           </tab>
 
-          <tab class="tab-pane" id="hairextension" #hairextensionTab="tab">
+          <tab class="tab-pane" #hairextensionTab="tab">
             <div class="varietyContent">
               <img
                 src="./assets/images/variety-2.jpeg"
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Hair Extension</h3>
-              <h4>$19.00 Per Head</h4>
+              <h3>Hair Straightening & Curls</h3>
+              <!-- <h4>&#8377;300 Per Head</h4> -->
               <p>
-                Amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                Hair straightening is a sure-shot way of getting smoother,
+                sleeker and softer hair that is free of frizzy flyaways.
+                Regardless of your original hair texture, you can straighten
+                your locks in various ways.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Hair Straightening')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
-          <tab class="tab-pane" id="correctivecolor" #correctivecolorTab="tab">
+          <tab class="tab-pane" #correctivecolorTab="tab">
             <div class="varietyContent">
               <img
                 src="./assets/images/variety-3.jpeg"
@@ -132,24 +155,24 @@
                 class="img-responsive"
               />
               <h3>Corrective Color</h3>
-              <h4>$13.00 Per Head</h4>
+              <!-- <h4>&#8377;1000.00 Per Head</h4> -->
               <p>
-                Ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo.
+                Corrective hair color is a color process that must be performed
+                by a professional hair colorist to correct any and all damage
+                caused by a color service gone wrong. At Creative Color and Cuts
+                we take pride in knowing exactly what it takes to get you back
+                on the right track.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Corrective Color')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
-          <tab class="tab-pane" id="haircut" #haircutTab="tab">
+          <tab class="tab-pane" #haircutTab="tab">
             <div class="varietyContent">
               <img
                 src="./assets/images/variety-4.jpeg"
@@ -157,22 +180,23 @@
                 class="img-responsive"
               />
               <h3>Hair Cut</h3>
-              <h4>$48.00 Per Head</h4>
+              <!-- <h4>$48.00 Per Head</h4> -->
               <p>
-                Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                A regular haircut, in Western fashion, is a men's and boys'
+                hairstyle that has hair long enough to comb on top, a defined or
+                deconstructed side part, and a short, semi-short, medium, long,
+                or extra long back and sides.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Hair Cut')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
-          <tab class="tab-pane" id="partialfoil" #partialfoilTab="tab">
+          <tab class="tab-pane" #partialfoilTab="tab">
             <div class="varietyContent">
               <img
                 src="./assets/images/variety-5.jpeg"
@@ -180,27 +204,26 @@
                 class="img-responsive"
               />
               <h3>Partial Foil</h3>
-              <h4>$10.00 Per Head</h4>
+              <!-- <h4>$10.00 Per Head</h4> -->
               <p>
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                A partial foil means to foil only the hair on the top sections
+                of the head. This is great for a more natural, “darker
+                underneath” look, or in between appointments for full foils to
+                refresh the most noticed areas. If you don’t have layers in your
+                hair, a partial foil will make it look fully highlighted when
+                you wear your hair down. If it is layered, you will see the
+                color of the underneath section of hair poking out underneath.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Partial Foil')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
-          <tab
-            class="tab-pane"
-            id="extensionpertrack"
-            #extensionpertrackTab="tab"
-          >
+          <tab class="tab-pane" #extensionpertrackTab="tab">
             <div class="varietyContent">
               <img
                 src="./assets/images/variety-6.jpeg"
@@ -208,22 +231,20 @@
                 class="img-responsive"
               />
               <h3>Extension Per Track</h3>
-              <h4>$40.00 Per Head</h4>
+              <!-- <h4>$40.00 Per Head</h4> -->
               <p>
-                Voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                How many hair extensions you need for a full head depends on
+                several factors, but generally you can count on 4 to 10 packs of
+                hair for I-Link and Kera-Link or 3 to 7 packs for Tape-In.
+                (I-Link and Kera-Link packs come with 20 strands per pack;
+                Tape-In packs include 10 wefts per pack.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Extension Per Track')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
         </tabset>
