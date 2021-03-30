@@ -16,6 +16,10 @@ import { BookAppointmentComponent } from './book-appointment/book-appointment.co
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { WelcomeComponent } from './home/components/welcome/welcome.component';
+import { SkinCareComponent } from './home/components/skin-care/skin-care.component';
+import { MakeupComponent } from './home/components/makeup/makeup.component';
+import { HairCareComponent } from './home/components/hair-care/hair-care.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     HomeComponent,
     NotFoundComponent,
     BookAppointmentComponent,
+    WelcomeComponent,
+    SkinCareComponent,
+    MakeupComponent,
+    HairCareComponent,
   ],
   imports: [
     BrowserModule,
