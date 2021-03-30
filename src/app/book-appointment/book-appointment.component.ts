@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 @Component({
@@ -13,6 +13,16 @@ export class BookAppointmentComponent implements OnInit {
   colorTheme = 'theme-blue';
   bsConfig: Partial<BsDatepickerConfig>;
   form: FormGroup;
+  availableServices: Array<any> = [
+    { name: 'braidsAndTwist', value: 'Braids & Twist' },
+    { name: 'hairColor', value: 'Hair Color' },
+    { name: 'hairExtension', value: 'Hair Extension' },
+    { name: 'correctiveColor', value: 'Corrective Color' },
+    { name: 'hairCut', value: 'Hair Cut' },
+    { name: 'partialFoil', value: 'Partial Foil' },
+    { name: 'expensionPerTrack', value: 'Extension Per Track' },
+  ];
+
   constructor(private fb: FormBuilder, private firestore: AngularFirestore) {}
 
   ngOnInit(): void {
@@ -26,7 +36,25 @@ export class BookAppointmentComponent implements OnInit {
       phone: [''],
       address: [''],
       message: [''],
+      services: this.fb.array([]),
     });
+  }
+
+  onCheckboxChange(e) {
+    const checkArray: FormArray = this.form.get('services') as FormArray;
+
+    if (e.target.checked) {
+      checkArray.push(new FormControl(e.target.value));
+    } else {
+      let i: number = 0;
+      checkArray.controls.forEach((item: FormControl) => {
+        if (item.value == e.target.value) {
+          checkArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
   }
 
   addAppointment() {
@@ -38,7 +66,7 @@ export class BookAppointmentComponent implements OnInit {
         this.form.reset();
       })
       .catch((e) => {
-        console.log(e);
+        console.log('Appointment Error ', e);
       });
   }
 

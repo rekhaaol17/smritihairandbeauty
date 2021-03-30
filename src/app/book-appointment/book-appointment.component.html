@@ -17,87 +17,19 @@
         </div>
         <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
           <ul class="list-unstyled custom-list">
-            <li class="checkbox form-check custom-checkbox">
+            <li
+              class="checkbox form-check custom-checkbox"
+              *ngFor="let service of availableServices; let i = index"
+            >
               <input
                 class="form-check-input"
                 type="checkbox"
-                value=""
-                id="defaultCheck1"
+                [value]="service.value"
+                (change)="onCheckboxChange($event)"
+                id="{{ service.name }}"
               />
-              <label class="form-check-label" for="defaultCheck1">
-                Braids & Twist
-              </label>
-            </li>
-
-            <li class="checkbox form-check custom-checkbox">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="defaultCheck2"
-              />
-              <label class="form-check-label" for="defaultCheck2">
-                Hair color
-              </label>
-            </li>
-
-            <li class="checkbox form-check custom-checkbox">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="defaultCheck3"
-              />
-              <label class="form-check-label" for="defaultCheck3">
-                Hair extension
-              </label>
-            </li>
-
-            <li class="checkbox form-check custom-checkbox">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="defaultCheck4"
-              />
-              <label class="form-check-label" for="defaultCheck4">
-                Corrective color
-              </label>
-            </li>
-
-            <li class="checkbox form-check custom-checkbox">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="defaultCheck5"
-              />
-              <label class="form-check-label" for="defaultCheck5">
-                Hair cut
-              </label>
-            </li>
-
-            <li class="checkbox form-check custom-checkbox">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="defaultCheck6"
-              />
-              <label class="form-check-label" for="defaultCheck6">
-                Partial foil
-              </label>
-            </li>
-
-            <li class="checkbox form-check custom-checkbox">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="defaultCheck7"
-              />
-              <label class="form-check-label" for="defaultCheck7">
-                Extension per track
+              <label class="form-check-label" for="{{ service.name }}">
+                {{ service.value }}
               </label>
             </li>
           </ul>
@@ -107,17 +39,17 @@
           </div>
 
           <div class="dateSelect custom-dateSelect">
-            <div
-              class="input-group date ed-datepicker filterDate"
-              data-provide="datepicker"
-            >
+            <div class="input-group date ed-datepicker filterDate">
               <input
                 type="text"
                 class="form-control"
-                placeholder="DD/MM/YYYY"
+                placeholder="MM/DD/YYYY"
+                formControlName="date"
+                bsDatepicker
+                [bsConfig]="bsConfig"
               />
               <div class="input-group-addon">
-                <span class="fa fa-calendar"></span>
+                <span class="ti-calendar"></span>
               </div>
             </div>
           </div>
@@ -128,12 +60,7 @@
 
           <div class="custom-timeSelect clearfix">
             <div class="countrySelect timeSelect">
-              <select name="guiest_id2" id="guiest_id2" class="select-drop">
-                <option value="0">- Select Time -</option>
-                <option value="1">9am - 10am</option>
-                <option value="2">10am - 11am</option>
-                <option value="3">11am - 12pm</option>
-              </select>
+              <timepicker formControlName="time"></timepicker>
             </div>
           </div>
 
@@ -151,7 +78,7 @@
                 name="contact-form-name"
                 class="form-control"
                 placeholder="Your Name"
-                required
+                formControlName="name"
               />
             </div>
             <div class="form-group">
@@ -160,7 +87,7 @@
                 name="contact-form-email"
                 class="form-control"
                 placeholder="Your Email"
-                required
+                formControlName="email"
               />
             </div>
             <div class="form-group">
@@ -169,7 +96,16 @@
                 name="contact-form-mobile"
                 class="form-control"
                 placeholder="Your Mobile"
-                required
+                formControlName="phone"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="appointment-form-address"
+                class="form-control"
+                placeholder="Your address"
+                formControlName="address"
               />
             </div>
             <div class="form-group">
@@ -177,7 +113,7 @@
                 class="form-control"
                 name="contact-form-message"
                 placeholder="Your Message"
-                required
+                formControlName="message"
               ></textarea>
             </div>
             <div class="form-group">

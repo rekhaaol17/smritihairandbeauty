@@ -6,9 +6,9 @@
         <table class="table">
           <thead>
             <tr>
+              <th>Name</th>
               <th>Date</th>
               <th>Time</th>
-              <th>Name</th>
               <th>Phone</th>
               <th>Status</th>
               <th>Actions</th>
@@ -17,9 +17,13 @@
 
           <tbody>
             <tr *ngFor="let apmt of appointments$ | async">
+              <td>
+                <a [routerLink]="[apmt.name, 'detail']">
+                  {{ apmt.name }}
+                </a>
+              </td>
               <td>{{ apmt.date.toMillis() | date: 'mediumDate' }}</td>
               <td>{{ apmt.time.toMillis() | date: 'shortTime' }}</td>
-              <td>{{ apmt.name }}</td>
               <td>{{ apmt.phone }}</td>
               <td><span class="label label-primary">Processing</span></td>
               <td>
