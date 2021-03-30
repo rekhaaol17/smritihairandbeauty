@@ -3,6 +3,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'sm-appointment-model',
@@ -17,7 +18,8 @@ export class AppointmentModelComponent implements OnInit {
   constructor(
     public bsModalRef: BsModalRef,
     private fb: FormBuilder,
-    private firestore: AngularFirestore
+    private firestore: AngularFirestore,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -39,7 +41,7 @@ export class AppointmentModelComponent implements OnInit {
       .collection('appointments')
       .add(this.form.value)
       .then((res) => {
-        console.log(res);
+        this.toastr.success('Appointment successfull!');
         this.form.reset();
       })
       .catch((e) => {

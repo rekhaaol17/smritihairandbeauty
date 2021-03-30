@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'sm-book-appointment',
@@ -23,7 +25,12 @@ export class BookAppointmentComponent implements OnInit {
     { name: 'expensionPerTrack', value: 'Extension Per Track' },
   ];
 
-  constructor(private fb: FormBuilder, private firestore: AngularFirestore) {}
+  constructor(
+    private fb: FormBuilder,
+    private firestore: AngularFirestore,
+    private toastr: ToastrService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.bsConfig = Object.assign({}, { containerClass: this.colorTheme });
@@ -62,8 +69,9 @@ export class BookAppointmentComponent implements OnInit {
       .collection('appointments')
       .add(this.form.value)
       .then((res) => {
-        console.log(res);
+        this.toastr.success('Appointment successfull!');
         this.form.reset();
+        this.router.navigateByUrl('/');
       })
       .catch((e) => {
         console.log('Appointment Error ', e);

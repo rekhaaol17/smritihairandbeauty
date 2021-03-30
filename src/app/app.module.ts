@@ -20,6 +20,7 @@ import { WelcomeComponent } from './home/components/welcome/welcome.component';
 import { SkinCareComponent } from './home/components/skin-care/skin-care.component';
 import { MakeupComponent } from './home/components/makeup/makeup.component';
 import { HairCareComponent } from './home/components/hair-care/hair-care.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { HairCareComponent } from './home/components/hair-care/hair-care.compone
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
