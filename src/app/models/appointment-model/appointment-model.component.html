@@ -20,65 +20,71 @@
     <div class="form-group categoryTitle">
       <h5>Service Date and Time</h5>
     </div>
-    <div class="dateSelect form-half form-left">
-      <div class="input-group date ed-datepicker filterDate">
-        <input
-          type="text"
-          name="appointment-form-date"
-          class="form-control"
-          placeholder="MM/DD/YYYY"
-          formControlName="date"
-          bsDatepicker
-          [bsConfig]="bsConfig"
-        />
-        <div class="input-group-addon">
-          <span class="ti-calendar"></span>
+    <div class="row">
+      <div class="dateSelect col-md-6">
+        <div class="input-group date ed-datepicker filterDate">
+          <input
+            type="text"
+            name="appointment-form-date"
+            class="form-control"
+            placeholder="MM/DD/YYYY"
+            formControlName="date"
+            bsDatepicker
+            [bsConfig]="bsConfig"
+          />
+          <div class="input-group-addon">
+            <span class="ti-calendar"></span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="timeSelect appointment-timeSelect form-half clearfix">
-      <timepicker formControlName="time"></timepicker>
+      <div class="timeSelect appointment-timeSelect col-md-6">
+        <timepicker formControlName="time"></timepicker>
+      </div>
     </div>
 
     <div class="form-group categoryTitle">
       <h5>Personal info</h5>
     </div>
-    <div class="form-group form-half form-left">
-      <input
-        type="text"
-        name="appointment-form-full-name"
-        class="form-control"
-        placeholder="Name"
-        formControlName="name"
-      />
+    <div class="row">
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          name="appointment-form-full-name"
+          class="form-control"
+          placeholder="Name"
+          formControlName="name"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <input
+          type="email"
+          name="appointment-form-email"
+          class="form-control"
+          placeholder="Your email"
+          formControlName="email"
+        />
+      </div>
     </div>
-    <div class="form-group form-half form-right">
-      <input
-        type="email"
-        name="appointment-form-email"
-        class="form-control"
-        placeholder="Your email"
-        formControlName="email"
-      />
-    </div>
-    <div class="form-group form-half form-left">
-      <input
-        type="tel"
-        name="appointment-form-phone"
-        class="form-control"
-        placeholder="Phone number"
-        formControlName="phone"
-      />
-    </div>
-    <div class="form-group form-half form-right">
-      <input
-        type="text"
-        name="appointment-form-address"
-        class="form-control"
-        placeholder="Your address"
-        formControlName="address"
-      />
+    <div class="row">
+      <div class="form-group col-md-6">
+        <input
+          type="tel"
+          name="appointment-form-phone"
+          class="form-control"
+          placeholder="Phone number"
+          formControlName="phone"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          name="appointment-form-address"
+          class="form-control"
+          placeholder="Your address"
+          formControlName="address"
+        />
+      </div>
     </div>
     <div class="form-group">
       <textarea
