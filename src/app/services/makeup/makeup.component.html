@@ -8,56 +8,63 @@
               href=""
               (click)="selectTab(0, $event)"
               [class.active]="weddingMakeupTab.active"
-              >Bridal Makeup<span>$25</span></a
-            >
+              >Bridal Makeup
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(1, $event)"
               [class.active]="engagementMakeupTab.active"
-              >Engagement Makeup<span>$25</span></a
-            >
+              >Engagement Makeup
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(2, $event)"
               [class.active]="partyMakeupTab.active"
-              >Party Makeup<span>$25</span></a
-            >
+              >Party Makeup
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(3, $event)"
               [class.active]="matteMakeupTab.active"
-              >Matte Makeup<span>$25</span></a
-            >
+              >Matte Makeup
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(4, $event)"
               [class.active]="naturalMinimalMakeupTab.active"
-              >Natural Makeup<span>$40</span></a
-            >
+              >Natural Makeup
+              <!-- <span>$40</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(5, $event)"
               [class.active]="shimmerMakeupTab.active"
-              >Shimmer Makeup<span>$19</span></a
-            >
+              >Shimmer Makeup
+              <!-- <span>$19</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(6, $event)"
               [class.active]="smokeyMakeupTab.active"
-              >Smokey Makeup<span>$13</span></a
-            >
+              >Smokey Makeup
+              <!-- <span>$13</span> -->
+            </a>
           </li>
         </ul>
       </div>
@@ -72,20 +79,26 @@
                 class="img-responsive"
               />
               <h3>Wedding Makeup</h3>
-              <h4>$25.00 Per Head</h4>
+              <!-- <h4>$25.00 Per Head</h4> -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                Book the best bridal makeup package from top & verified bridal
+                makeup artists in Hyderabad. Compare prices, reviews and book
+                the best Bridal Makeup in Hyderabad at affordable prices.
               </p>
-              <a
-                href="javascript:void(0)"
+              <p>
+                Bridal makeup is extensive with different techniques like HD,
+                airbrush and mineral, is used to get the right kind of makeup.
+                It requires special products and tools to apply. The makeup is
+                heavier than party or engagement makeup to have a long-lasting
+                effect since you’ll be sitting through your wedding for a long
+                time.
+              </p>
+              <button
+                (click)="bookAppointment('Wedding Makeup')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
           <tab class="tab-pane" #engagementMakeupTab="tab">
@@ -95,21 +108,22 @@
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Braids &amp; Twist</h3>
-              <h4>$25.00 Per Head</h4>
+              <h3>Engagement Makeup</h3>
+              <!-- <h4>$25.00 Per Head</h4> -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                Engagement makeup is the in-between makeup routine. It’s neither
+                as light as party makeup nor as heavy as bridal makeup. It can
+                either be done by using basic products or even specialised
+                techniques. It all depends on a lot of factors, so here you go,
+                read everything about how to get the right engagement makeup,
+                now.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Engagement Makeup')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
@@ -120,21 +134,20 @@
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Braids &amp; Twist</h3>
-              <h4>$25.00 Per Head</h4>
+              <h3>Party Makeup</h3>
+              <!-- <h4>$25.00 Per Head</h4> -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                Party makeup is basic with the usual makeup routine of primer,
+                foundation, contouring, eye makeup and lip shade. It doesn’t
+                require any special kind of products or tools to apply. Wedding
+                guests usually go for party makeup.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Party Makeup')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
           <tab class="tab-pane" #matteMakeupTab="tab">
@@ -144,21 +157,25 @@
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Braids &amp; Twist</h3>
-              <h4>$25.00 Per Head</h4>
+              <h3>Matte Makeup</h3>
+              <!-- <h4>$25.00 Per Head</h4> -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                Matte makeup gives the impression of poreless skin and a
+                pristine finish -- meaning shine and oil are nowhere to be
+                found. Matte makeup is often associated with dry, powdery skin;
+                not necessarily so! Oily skin types might swear by matte makeup
+                finishes to combat shine on a daily basis, but fruit pigmented®
+                matte makeup is made with nourishing ingredients that can cater
+                to dry skin types, too. Being a great asset for full coverage on
+                any skin type, it’s no wonder matte makeup is arguably more of a
+                lifestyle than a trend.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Matte Makeup')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
@@ -169,20 +186,20 @@
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Hair Color</h3>
-              <h4>$40.00 Per Head</h4>
+              <h3>Natural Makeup</h3>
+              <!-- <h4>$40.00 Per Head</h4> -->
               <p>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo. Consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo.
+                Natural makeup uses the effects of light and dark to create a
+                pleasing look. The main point about natural makeup is that it
+                enhances the wearer's features without being loud with the
+                colours she wears.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Natural Makeup')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
@@ -193,20 +210,20 @@
                 alt="Image Shimmer"
                 class="img-responsive"
               />
-              <h3>Hair Extension</h3>
-              <h4>$19.00 Per Head</h4>
+              <h3>Shimmer Makeup</h3>
+              <!-- <h4>$19.00 Per Head</h4> -->
               <p>
-                Amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                Shimmer Makeup used to highlight and accentuate areas of skin
+                the light hits. It is a versatile product that can be used on
+                people of all ages and skin types, and it's quite easy to apply
+                as the finishing touch for your makeup routine.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Shimmer Makeup')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
@@ -217,21 +234,21 @@
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Corrective Color</h3>
-              <h4>$13.00 Per Head</h4>
+              <h3>Smokey Makeup</h3>
+              <!-- <h4>$13.00 Per Head</h4> -->
               <p>
-                Ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo.
+                Smokey eye makeup, as the name implies, consists of dark
+                eyeshadow and eyeliner blended into lighter eyeshadow to create
+                a "smokey" effect. ... Nowadays, smokey eyes are highlighted
+                with a pop of light metallic or shimmery eyeshadow in the inner
+                corner of the eye.
               </p>
-              <a href="#" class="btn btn-primary first-btn"
-                >make An Appoinment</a
+              <button
+                (click)="bookAppointment('Smokey Makeup')"
+                class="btn btn-primary first-btn"
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
         </tabset>

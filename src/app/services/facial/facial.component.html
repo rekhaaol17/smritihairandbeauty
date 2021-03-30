@@ -8,32 +8,36 @@
               href=""
               (click)="selectTab(0, $event)"
               [class.active]="normalDrySkinTab.active"
-              >Normal/Dry Skin<span>$25</span></a
-            >
+              >Normal / Dry Skin
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(1, $event)"
               [class.active]="combinationSkinTab.active"
-              >Combination Skin<span>$25</span></a
-            >
+              >Combination Skin
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(2, $event)"
               [class.active]="oilySkinTab.active"
-              >Oily Skin <span>$25</span></a
-            >
+              >Oily Skin
+              <!-- <span>$25</span> -->
+            </a>
           </li>
           <li>
             <a
               href=""
               (click)="selectTab(3, $event)"
               [class.active]="sensitiveSkinTab.active"
-              >Sensitive Skin<span>$25</span></a
-            >
+              >Sensitive Skin
+              <!-- <span>$25</span> -->
+            </a>
           </li>
         </ul>
       </div>
@@ -47,23 +51,25 @@
                 alt="Image"
                 class="img-responsive"
               />
-              <h3>Normal/Dry Skin</h3>
-              <h4>Rs. 10.00 Per Head</h4>
+              <h3>Normal / Dry Skin</h3>
+              <!-- <h4>Rs. 10.00 Per Head</h4> -->
               <p>
-                For normal to dry skin, choose a facial that includes deep
-                cleansing, a moisturising massage and steam treatment to remove
-                extra dirt. Opt for a moisturising mask or a hydrating serum to
-                finish off. If your skin is on the dry side, avoid too much
-                exfoliating
+                The best way to think about your normal skin is that it ends up
+                being a subtle matter of degree, preferences and expectations.
+                It also always depends on the skin care products you’re
+                currently using. In other words, even those with seemingly
+                flawless skin still can feel a bit of dryness or a bit of
+                oiliness or see signs of combination skin with occasional
+                clogged pores. Think about it as mostly normal skin plus a
+                little bit of other minor, barely detectable issues
                 <a routerLink="../dry-skin-care">Read More</a>.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Normal/Dry Skin')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
           <tab class="tab-pane" #combinationSkinTab="tab">
@@ -74,7 +80,7 @@
                 class="img-responsive"
               />
               <h3>Combination Skin</h3>
-              <h4>Rs25.00 Per Head</h4>
+              <!-- <h4>Rs25.00 Per Head</h4> -->
               <p>
                 Since combination skin has oily and normal to dry skin, make
                 sure mild products are used. This is so that you don’t aggravate
@@ -82,13 +88,12 @@
                 with products used for oily skin
                 <a routerLink="../combination-skin-care">Read More</a>.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Combination Skin')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
 
@@ -100,7 +105,7 @@
                 class="img-responsive"
               />
               <h3>Oily Skin</h3>
-              <h4>$25.00 Per Head</h4>
+              <!-- <h4>$25.00 Per Head</h4> -->
               <p>
                 For oily skin, opt for a facial that uses natural extracts,
                 focuses on deep cleansing and extraction with toning, a face
@@ -108,13 +113,12 @@
                 shrink the pores and make the skin soft
                 <a routerLink="../oily-skin-care">Read More</a>.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Oily Skin')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
           <tab class="tab-pane" #sensitiveSkinTab="tab">
@@ -124,21 +128,21 @@
                 alt="Image Variety"
                 class="img-responsive"
               />
-              <h3>Braids &amp; Twist</h3>
-              <h4>$25.00 Per Head</h4>
+              <h3>Sensitive Skin</h3>
+              <!-- <h4>$25.00 Per Head</h4> -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo.
+                Sensitive skin is a common issue but not a medical diagnosis in
+                itself. The term generally refers to skin that is more prone to
+                inflammation or adverse reactions. People with sensitive skin
+                may have strong reactions to chemicals, dyes, and fragrances
+                present in products that come into contact with the skin.
               </p>
-              <a
-                href="javascript:void(0)"
+              <button
+                (click)="bookAppointment('Sensitive Skin')"
                 class="btn btn-primary first-btn"
-                data-toggle="modal"
-                data-target="#appoinmentModal"
-                >make An Appoinment</a
               >
+                Make An Appoinment
+              </button>
             </div>
           </tab>
         </tabset>
