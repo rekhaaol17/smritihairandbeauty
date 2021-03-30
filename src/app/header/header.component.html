@@ -14,12 +14,7 @@
     </button>
 
     <a class="navbar-brand" routerLink="/">
-      <img
-        class=""
-        src="assets/images/logo.png"
-        alt="logo"
-        class="d-none d-lg-inline-block"
-      />
+      <img class="" src="assets/images/logo.svg" alt="logo" />
       <div class="logo-detail">
         <span class="logo-text"> Smriti Hair and Beauty </span>
         <span>Professional Salon</span>
@@ -245,6 +240,7 @@
             role="button"
             routerLink="appointments"
             routerLinkActive="active"
+            (click)="isOpened = false"
             >Appointments</a
           >
         </li>

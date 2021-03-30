@@ -15,136 +15,136 @@
         <div class="contactTitle">
           <h3>Select Services:</h3>
         </div>
+        <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+          <ul class="list-unstyled custom-list">
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck1"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Braids & Twist
+              </label>
+            </li>
 
-        <ul class="list-unstyled custom-list">
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck1"
-            />
-            <label class="form-check-label" for="defaultCheck1">
-              Braids & Twist
-            </label>
-          </li>
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck2"
+              />
+              <label class="form-check-label" for="defaultCheck2">
+                Hair color
+              </label>
+            </li>
 
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck2"
-            />
-            <label class="form-check-label" for="defaultCheck2">
-              Hair color
-            </label>
-          </li>
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck3"
+              />
+              <label class="form-check-label" for="defaultCheck3">
+                Hair extension
+              </label>
+            </li>
 
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck3"
-            />
-            <label class="form-check-label" for="defaultCheck3">
-              Hair extension
-            </label>
-          </li>
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck4"
+              />
+              <label class="form-check-label" for="defaultCheck4">
+                Corrective color
+              </label>
+            </li>
 
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck4"
-            />
-            <label class="form-check-label" for="defaultCheck4">
-              Corrective color
-            </label>
-          </li>
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck5"
+              />
+              <label class="form-check-label" for="defaultCheck5">
+                Hair cut
+              </label>
+            </li>
 
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck5"
-            />
-            <label class="form-check-label" for="defaultCheck5">
-              Hair cut
-            </label>
-          </li>
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck6"
+              />
+              <label class="form-check-label" for="defaultCheck6">
+                Partial foil
+              </label>
+            </li>
 
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck6"
-            />
-            <label class="form-check-label" for="defaultCheck6">
-              Partial foil
-            </label>
-          </li>
+            <li class="checkbox form-check custom-checkbox">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck7"
+              />
+              <label class="form-check-label" for="defaultCheck7">
+                Extension per track
+              </label>
+            </li>
+          </ul>
 
-          <li class="checkbox form-check custom-checkbox">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="defaultCheck7"
-            />
-            <label class="form-check-label" for="defaultCheck7">
-              Extension per track
-            </label>
-          </li>
-        </ul>
+          <div class="contactTitle">
+            <h3>Appointment Date:</h3>
+          </div>
 
-        <div class="contactTitle">
-          <h3>Appointment Date:</h3>
-        </div>
-
-        <div class="dateSelect custom-dateSelect">
-          <div
-            class="input-group date ed-datepicker filterDate"
-            data-provide="datepicker"
-          >
-            <input type="text" class="form-control" placeholder="DD/MM/YYYY" />
-            <div class="input-group-addon">
-              <span class="fa fa-calendar"></span>
+          <div class="dateSelect custom-dateSelect">
+            <div
+              class="input-group date ed-datepicker filterDate"
+              data-provide="datepicker"
+            >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="DD/MM/YYYY"
+              />
+              <div class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="contactTitle">
-          <h3>Appointment Time:</h3>
-        </div>
-
-        <div class="custom-timeSelect clearfix">
-          <div class="countrySelect timeSelect">
-            <select name="guiest_id2" id="guiest_id2" class="select-drop">
-              <option value="0">- Select Time -</option>
-              <option value="1">9am - 10am</option>
-              <option value="2">10am - 11am</option>
-              <option value="3">11am - 12pm</option>
-            </select>
+          <div class="contactTitle">
+            <h3>Appointment Time:</h3>
           </div>
-        </div>
 
-        <div class="contactTitle">
-          <h3>Personal info:</h3>
-        </div>
+          <div class="custom-timeSelect clearfix">
+            <div class="countrySelect timeSelect">
+              <select name="guiest_id2" id="guiest_id2" class="select-drop">
+                <option value="0">- Select Time -</option>
+                <option value="1">9am - 10am</option>
+                <option value="2">10am - 11am</option>
+                <option value="3">11am - 12pm</option>
+              </select>
+            </div>
+          </div>
 
-        <div class="contactForm">
-          <div id="alert"></div>
-          <!--Response Holder-->
-          <form
-            action="mail/contact-form.php"
-            id="angelContactForm"
-            method="post"
-          >
+          <div class="contactTitle">
+            <h3>Personal info:</h3>
+          </div>
+
+          <div class="contactForm">
+            <div id="alert"></div>
+            <!--Response Holder-->
+
             <div class="form-group">
               <input
                 type="text"
@@ -189,8 +189,8 @@
                 Get appointment
               </button>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
       <div class="col-lg-5 col-xl-4">
         <div class="holdingInfo patternbg">

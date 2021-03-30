@@ -1,8 +1,10 @@
-.timeSelect {
-  position: relative;
-}
+@media (min-width: 768px) {
+  timepicker {
+    position: absolute;
+    top: -34px;
+  }
 
-timepicker {
-  position: absolute;
-  top: -34px;
+  timepicker ::ng-deep .btn-link {
+    color: #ec5598;
+  }
 }
