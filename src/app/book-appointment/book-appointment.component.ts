@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-import { ToastrService } from 'ngx-toastr';
+import { PinkToastService } from '../shared/services/toast.service';
 
 @Component({
   selector: 'sm-book-appointment',
@@ -28,8 +28,8 @@ export class BookAppointmentComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private firestore: AngularFirestore,
-    private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private pinkToastService: PinkToastService
   ) {}
 
   ngOnInit(): void {
@@ -69,7 +69,7 @@ export class BookAppointmentComponent implements OnInit {
       .collection('appointments')
       .add(this.form.value)
       .then((res) => {
-        this.toastr.success('Appointment successfull!');
+        this.pinkToastService.openPinkToast('Appointment successfull!');
         this.form.reset();
         this.router.navigateByUrl('/');
       })

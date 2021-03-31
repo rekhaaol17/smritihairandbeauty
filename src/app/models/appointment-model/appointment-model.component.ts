@@ -3,8 +3,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastrService } from 'ngx-toastr';
-
+import { PinkToastService } from 'src/app/shared/services/toast.service';
 @Component({
   selector: 'sm-appointment-model',
   templateUrl: './appointment-model.component.html',
@@ -15,11 +14,12 @@ export class AppointmentModelComponent implements OnInit {
   colorTheme = 'theme-blue';
   bsConfig: Partial<BsDatepickerConfig>;
   form: FormGroup;
+
   constructor(
     public bsModalRef: BsModalRef,
     private fb: FormBuilder,
     private firestore: AngularFirestore,
-    private toastr: ToastrService
+    private pinkToastService: PinkToastService
   ) {}
 
   ngOnInit(): void {
@@ -41,7 +41,7 @@ export class AppointmentModelComponent implements OnInit {
       .collection('appointments')
       .add(this.form.value)
       .then((res) => {
-        this.toastr.success('Appointment successfull!');
+        this.pinkToastService.openPinkToast('Appointment successfull!');
         this.form.reset();
       })
       .catch((e) => {

@@ -21,6 +21,7 @@ import { SkinCareComponent } from './home/components/skin-care/skin-care.compone
 import { MakeupComponent } from './home/components/makeup/makeup.component';
 import { HairCareComponent } from './home/components/hair-care/hair-care.component';
 import { ToastrModule } from 'ngx-toastr';
+import { PinkToast } from './shared/components/pink-toast';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ToastrModule } from 'ngx-toastr';
     SkinCareComponent,
     MakeupComponent,
     HairCareComponent,
+    PinkToast,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,6 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [],
+  entryComponents: [PinkToast],
 })
 export class AppModule {}
