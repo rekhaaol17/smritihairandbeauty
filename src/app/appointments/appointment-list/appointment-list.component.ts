@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'sm-appointment-list',
@@ -12,23 +13,21 @@ export class AppointmentListComponent implements OnInit {
   id: any;
   constructor(private firestore: AngularFirestore) {
     const collectionRef = this.firestore.collection('appointments');
-    const collectionInstance = collectionRef.valueChanges();
-    this.appointments$ = collectionInstance;
-
-    collectionRef.snapshotChanges().forEach((changes) => {
-      changes.map((a) => {
-        this.id = a.payload.doc.id;
-      });
-    });
+    this.appointments$ = collectionRef.snapshotChanges().pipe(
+      map((changes) =>
+        changes.map((c: any) => ({
+          id: c.payload.doc.id,
+          ...c.payload.doc.data(),
+        }))
+      )
+    );
   }
 
   ngOnInit(): void {}
 
-  deleteAppointment() {
+  deleteAppointment(id) {
     if (confirm('Delete?')) {
-      this.firestore.collection('appointments').doc(this.id).delete();
-      // this.edit = false;
-      // this.single = null;
+      this.firestore.collection('appointments').doc(id).delete();
     }
   }
 }
