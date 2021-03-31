@@ -35,6 +35,11 @@ const routes: Routes = [
       import('./services/services.module').then((m) => m.ServicesModule),
   },
   {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactModule),
+  },
+  {
     path: 'book-appointment',
     component: BookAppointmentComponent,
   },
