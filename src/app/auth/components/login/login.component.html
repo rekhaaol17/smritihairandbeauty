@@ -1,0 +1,126 @@
+<!-- FORM AREA SECTION -->
+<section class="clearfix formArea">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5 mb-4 mb-md-0">
+        <div class="panel panel-default formPart">
+          <div class="panel-heading patternbg d-flex">
+            log in to your account
+
+            <a routerLink="/auth/signup" class="ml-auto">New User</a>
+          </div>
+          <div class="panel-body">
+            <form (ngSubmit)="login()" [formGroup]="form">
+              <div class="form-group">
+                <i class="ti-email" aria-hidden="true"></i>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                  formControlName="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <i class="ti-lock" aria-hidden="true"></i>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Password"
+                  formControlName="password"
+                />
+              </div>
+
+              <!-- <div class="checkbox form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck0"
+                />
+                <label class="form-check-label" for="defaultCheck0">
+                  Remember me
+                </label>
+              </div> -->
+              <div class="form-group">
+                <a routerLink="/auth/forgot-password">Forgot Password?</a>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Log In
+              </button>
+
+              <button
+                type="submit"
+                class="btn btn-outline-info btn-block mt-2"
+                (click)="loginWithGoogle()"
+              >
+                Log In with Google
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-6 col-lg-5 col-xl-4">
+        <div class="panel panel-default formPart">
+          <div class="panel-heading patternbg">
+            Create an <span>account</span>
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullname"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email1"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="form-group">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd1"
+                  placeholder="Password"
+                />
+              </div>
+
+              <div class="checkbox form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck01"
+                />
+                <label class="form-check-label" for="defaultCheck01">
+                  Remember me
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Sign UP
+              </button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>

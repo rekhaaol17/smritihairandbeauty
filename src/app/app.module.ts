@@ -22,6 +22,7 @@ import { MakeupComponent } from './home/components/makeup/makeup.component';
 import { HairCareComponent } from './home/components/hair-care/hair-care.component';
 import { ToastrModule } from 'ngx-toastr';
 import { PinkToast } from './shared/components/pink-toast';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PinkToast } from './shared/components/pink-toast';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     ToastrModule.forRoot(),
   ],
   providers: [],

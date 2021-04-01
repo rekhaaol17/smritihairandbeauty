@@ -7,11 +7,21 @@ import { SkinCareComponent } from './home/components/skin-care/skin-care.compone
 import { WelcomeComponent } from './home/components/welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './shared/guard/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+    // canActivate: [AuthGuard],
   },
   {
     path: 'welcome',
@@ -45,6 +55,7 @@ const routes: Routes = [
   },
   {
     path: 'appointments',
+    // canActivate: [AuthGuard],
     loadChildren: () =>
       import('./appointments/appointments.module').then(
         (m) => m.AppointmentsModule

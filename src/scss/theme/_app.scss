@@ -413,7 +413,7 @@ body.bodyColor .navbar-sticky {
   font-weight: 700;
   border: 0;
   text-transform: uppercase;
-  background-color: transparent;
+  // background-color: transparent;
   border-radius: 0;
   letter-spacing: 1px;
 }
@@ -904,11 +904,11 @@ textarea.form-control {
   }
 }
 
-@media (min-width: 768px) {
-  .formPart .panel-heading {
-    font-size: 20px;
-  }
-}
+// @media (min-width: 768px) {
+//   .formPart .panel-heading {
+//     font-size: 20px;
+//   }
+// }
 
 .formPart .panel-heading span {
   font-weight: 700;
@@ -928,7 +928,7 @@ textarea.form-control {
   padding-left: 38px;
 }
 
-.formPart i.fa {
+.formPart i {
   position: absolute;
   left: 0;
   top: 0;
