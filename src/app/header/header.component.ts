@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   toggleNavbarItems() {
-    // this.isOpened = !this.isOpened;
+    this.isOpened = !this.isOpened;
   }
 
   toggleProfileMenu() {
