@@ -254,6 +254,17 @@
             >Contact</a
           >
         </li>
+        <ng-container *ngIf="!authService.userData as user">
+          <img
+            routerLink="auth"
+            class="login__img"
+            src="./assets/images/login.png"
+            width="60"
+            height="60"
+            alt="Login/Signup"
+            title="Login / Signup"
+          />
+        </ng-container>
         <ng-container *ngIf="authService.userData as user">
           <li class="nav-item dropdown" [class.show]="isProfileMenuOpened">
             <div class="user" (click)="toggleProfileMenu($event)">

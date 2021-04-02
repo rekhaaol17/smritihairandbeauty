@@ -34,7 +34,13 @@
   width: 190px;
 }
 
-.user img {
+.user img,
+.login__img {
   width: 65px;
   height: 65px;
+}
+
+.login__img {
+  margin-top: 23px;
+  cursor: pointer;
 }

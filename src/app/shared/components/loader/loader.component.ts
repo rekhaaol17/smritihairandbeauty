@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent implements OnInit {
-  show$: Observable<any>;
+  show$: Observable<boolean>;
   constructor(private loaderService: LoaderService) {}
 
   ngOnInit() {
-    this.show$ = this.loaderService.loaderState;
+    this.show$ = this.loaderService.loaderState$;
   }
 }
