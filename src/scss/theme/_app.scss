@@ -411,7 +411,7 @@ body.bodyColor .navbar-sticky {
   padding: 12px 20px;
   // color: #fff;
   font-weight: 700;
-  border: 0;
+  // border: 0;
   text-transform: uppercase;
   // background-color: transparent;
   border-radius: 0;
@@ -436,7 +436,7 @@ body.bodyColor .navbar-sticky {
 .btn.active,
 .btn:active,
 .btn:hover {
-  border: 0;
+  // border: 0;
   outline: 0;
   // color: #fff;
   box-shadow: none !important;
@@ -5485,12 +5485,12 @@ footer {
 
 .copyRight {
   border: 1px solid rgba(0, 0, 0, 0.07);
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 .copyRight .list-inline {
   text-align: center;
-  margin: 0 0 25px;
+  margin: 0 0 10px;
 }
 
 @media (min-width: 768px) {

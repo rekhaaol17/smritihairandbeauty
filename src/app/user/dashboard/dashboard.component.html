@@ -1,38 +1,5 @@
-<!-- DASHBOARD SECTION -->
-<section
-  class="clearfix orderSection padding"
-  *ngIf="authService.userData as user"
->
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <ul class="list-inline squareBtn">
-          <li class="li">
-            <a
-              href="javascript:void(0)"
-              class="btn btn-common btn-theme cursor-default"
-              >Account Dashboard</a
-            >
-          </li>
-          <li class="li">
-            <a href="user-profile.html" class="btn btn-common">Profile</a>
-          </li>
-          <li class="li">
-            <a href="address.html" class="btn btn-common">Address</a>
-          </li>
-          <li class="li">
-            <a href="all-order.html" class="btn btn-common">All Orders</a>
-          </li>
-          <li class="li">
-            <a href="wishlist.html" class="btn btn-common">Wishlist</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="innerWrapper">
-          <!-- <div class="alert alert-warning alert-dismissible" role="alert">
+<ng-container *ngIf="authService.userData as user">
+  <!-- <div class="alert alert-warning alert-dismissible" role="alert">
             <button
               type="button"
               class="close"
@@ -43,44 +10,49 @@
             </button>
             <strong>Warning!</strong> You have one unpaid order.
           </div> -->
-          <h3>
-            Wellcome
-            <span>{{ user.displayName ? user.displayName : user.email }}</span>
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <ul class="list-inline dashboard">
-            <li>
-              <a href="javascript:void(0)" class="btn btn-default btn-lg"
-                ><i class="ti-user" aria-hidden="true"></i>Profile</a
-              >
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="btn btn-default btn-lg"
-                ><i class="ti-location-pin" aria-hidden="true"></i>My Address</a
-              >
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="btn btn-default btn-lg"
-                ><i class="ti-list" aria-hidden="true"></i>All Orders</a
-              >
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="btn btn-default btn-lg"
-                ><i class="ti-gift" aria-hidden="true"></i>Wishlist</a
-              >
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="btn btn-default btn-lg"
-                ><i class="ti-plus" aria-hidden="true"></i>New Address</a
-              >
-            </li>
-          </ul>
-          <!-- <div class="dashboard">
+  <h3>
+    Wellcome
+    <span>{{ user.displayName ? user.displayName : user.email }}</span>
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  </p>
+  <ul class="list-inline dashboard">
+    <li>
+      <a [routerLink]="['/user', 'profile']" class="btn btn-default btn-lg"
+        ><i class="ti-user" aria-hidden="true"></i>Profile</a
+      >
+    </li>
+    <li>
+      <a routerLink="/user/address" class="btn btn-default btn-lg"
+        ><i class="ti-location-pin" aria-hidden="true"></i>My Address</a
+      >
+    </li>
+    <li>
+      <a routerLink="/user/orders" class="btn btn-default btn-lg"
+        ><i class="ti-list" aria-hidden="true"></i>All Orders</a
+      >
+    </li>
+    <li>
+      <a routerLink="/user/wishlist" class="btn btn-default btn-lg"
+        ><i class="ti-gift" aria-hidden="true"></i>Wishlist</a
+      >
+    </li>
+    <!-- <li>
+      <a href="javascript:void(0)" class="btn btn-default btn-lg"
+        ><i class="ti-plus" aria-hidden="true"></i>New Address</a
+      >
+    </li> -->
+    <li>
+      <a routerLink="/users" class="btn btn-default btn-lg"
+        ><i class="ti-view-list-alt" aria-hidden="true"></i>All Users</a
+      >
+    </li>
+  </ul>
+  <!-- <div class="dashboard">
             <h4>Unpaid Orders</h4>
             <div class="table-responsive">
               <table class="table">
@@ -139,8 +111,4 @@
               </table>
             </div>
           </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</ng-container>

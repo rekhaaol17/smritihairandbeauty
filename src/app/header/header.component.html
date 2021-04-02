@@ -270,6 +270,14 @@
             <ul class="dropdown-menu">
               <li>
                 <a
+                  routerLink="user/dashboard"
+                  routerLinkActive="active"
+                  (click)="isOpened = false; isProfileMenuOpened = false"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
                   routerLink="appointments"
                   routerLinkActive="active"
                   (click)="isOpened = false; isProfileMenuOpened = false"
