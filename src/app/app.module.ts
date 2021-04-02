@@ -23,6 +23,7 @@ import { HairCareComponent } from './home/components/hair-care/hair-care.compone
 import { ToastrModule } from 'ngx-toastr';
 import { PinkToast } from './shared/components/pink-toast';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoaderComponent } from './shared/components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MakeupComponent,
     HairCareComponent,
     PinkToast,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,66 +1,43 @@
-import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+} from '@angular/router';
+import { LoaderService } from './shared/components/loader/loader.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'smritiHairAndBeauty';
-  items: Observable<any[]>;
-  myArray = [];
-  constructor(private firestore: AngularFirestore) {
-    const collectionRef = this.firestore.collection('testCollection');
-    const collectionInstance = collectionRef.valueChanges();
-    collectionInstance.subscribe((ss) => (this.myArray = ss));
+export class AppComponent implements OnInit {
+  constructor(private router: Router, private loaderService: LoaderService) {}
 
-    // this.firestore
-    //   .collection('testCollection')
-    //   .get()
-    //   .subscribe((ss) => {
-    //     // console.log('hshs', [...ss.docs]);
-    //     ss.docs.forEach((doc) => {
-    //       this.myArray.push(doc.data());
-    //     });
-
-    //     console.log(this.myArray);
-    //   });
+  ngOnInit() {
+    this.onRouteEvents();
   }
 
-  form = new FormGroup({
-    newValue: new FormControl(''),
-  });
-
-  onSubmit() {
-    this.firestore
-      .collection('testCollection')
-      .add({
-        field: this.form.value.newValue,
-      })
-      .then((res) => {
-        console.log(res);
-        this.form.reset();
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
-
-  getOne() {
-    this.firestore
-      .collection('testCollection', (ref) => ref.where('field', '==', 'paspa'))
-      .get()
-      .subscribe((ss) => {
-        if (ss.docs.length === 0) {
-          console.log('Document not found! Try again!');
-        } else {
-          ss.docs.forEach((doc) => {
-            console.log('Got', doc.data());
-          });
+  onRouteEvents() {
+    this.router.events.subscribe((event) => {
+      switch (true) {
+        case event instanceof NavigationStart: {
+          this.loaderService.show();
+          break;
         }
-      });
+
+        case event instanceof NavigationEnd:
+        case event instanceof NavigationCancel:
+        case event instanceof NavigationError: {
+          this.loaderService.hide();
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    });
   }
 }
