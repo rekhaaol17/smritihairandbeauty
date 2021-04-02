@@ -1,4 +1,4 @@
-<ng-container *ngIf="authService.userData as user">
+<ng-container *ngIf="authService.user$ | async as user">
   <div class="orderBox patternbg">profile</div>
 
   <div class="profile">

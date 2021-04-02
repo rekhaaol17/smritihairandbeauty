@@ -7,28 +7,44 @@ import {
 import { Router } from '@angular/router';
 import { User } from 'src/app/shared/types/user.interface';
 import firebase from 'firebase/app';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   userData: any; // Save logged in user data
+  private subject = new BehaviorSubject<User>(null);
 
+  user$: Observable<User> = this.subject.asObservable();
+
+  isLoggedIn$: Observable<boolean>;
+  isLoggedOut$: Observable<boolean>;
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone // NgZone service to remove outside scope warning
   ) {
+    this.isLoggedIn$ = this.user$.pipe(
+      map((user) =>
+        user !== null && user.emailVerified !== false ? true : false
+      )
+    );
+    this.isLoggedOut$ = this.isLoggedIn$.pipe(map((loggedIn) => !loggedIn));
+
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
     this.afAuth.authState.subscribe((user) => {
       if (user) {
-        this.userData = user;
+        // this.userData = user;
+        this.subject.next(user);
         localStorage.setItem('user', JSON.stringify(this.userData));
         // JSON.parse(localStorage.getItem('user'));
       } else {
-        localStorage.setItem('user', null);
+        this.subject.next(null);
+        localStorage.removeItem('user');
         // JSON.parse(localStorage.getItem('user'));
       }
     });

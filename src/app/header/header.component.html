@@ -254,9 +254,10 @@
             >Contact</a
           >
         </li>
-        <ng-container *ngIf="!authService.userData as user">
+        <ng-container *ngIf="authService.isLoggedOut$ | async">
           <img
             routerLink="auth"
+            (click)="hideOpenedMenus()"
             class="login__img"
             src="./assets/images/login.png"
             width="60"
@@ -265,8 +266,12 @@
             title="Login / Signup"
           />
         </ng-container>
-        <ng-container *ngIf="authService.userData as user">
-          <li class="nav-item dropdown" [class.show]="isProfileMenuOpened">
+        <ng-container *ngIf="authService.isLoggedIn$ | async">
+          <li
+            class="nav-item dropdown"
+            [class.show]="isProfileMenuOpened"
+            *ngIf="authService.user$ | async as user"
+          >
             <div class="user" (click)="toggleProfileMenu($event)">
               <img
                 class="img-thumbnail rounded-circle dropdown-toggle"
@@ -283,7 +288,7 @@
                 <a
                   routerLink="user/dashboard"
                   routerLinkActive="active"
-                  (click)="isOpened = false; isProfileMenuOpened = false"
+                  (click)="hideOpenedMenus()"
                   >Dashboard</a
                 >
               </li>
@@ -291,7 +296,7 @@
                 <a
                   routerLink="appointments"
                   routerLinkActive="active"
-                  (click)="isOpened = false; isProfileMenuOpened = false"
+                  (click)="hideOpenedMenus()"
                   >Appointments</a
                 >
               </li>

@@ -26,4 +26,9 @@ export class HeaderComponent implements OnInit {
     this.authService.signOut();
     this.isProfileMenuOpened = false;
   }
+
+  hideOpenedMenus() {
+    this.isOpened = false;
+    this.isProfileMenuOpened = false;
+  }
 }
