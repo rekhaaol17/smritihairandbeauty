@@ -24,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { PinkToast } from './shared/components/pink-toast';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoaderComponent } from './shared/components/loader/loader.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LoaderComponent } from './shared/components/loader/loader.component';
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
